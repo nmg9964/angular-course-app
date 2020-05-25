@@ -1,1 +1,14 @@
-<app-recipe-item></app-recipe-item>
+<div class='row'>
+  <div class='col-xs-12'>
+    <a href='#' class='list-group-item clearfix' *ngFor='let recipe of recipes'>
+      <div class='pull-left'>
+        <h3 class='list-group-item-heading'>{{ recipe.name }}</h3>
+        <p class='list-group-item-text'>{{ recipe.description }}</p>
+        <span class='pull-right'>
+          <img class='img-responsive' src='{{ recipe.imgPath }}' alt='Recipe Image'>
+        </span>
+      </div>
+    </a>
+  </div>
+  <app-recipe-item></app-recipe-item>
+</div>
