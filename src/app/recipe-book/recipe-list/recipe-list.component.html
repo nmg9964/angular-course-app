@@ -5,7 +5,7 @@
         <h3 class='list-group-item-heading'>{{ recipe.name }}</h3>
         <p class='list-group-item-text'>{{ recipe.description }}</p>
         <span class='pull-right'>
-          <img class='img-responsive' src='{{ recipe.imgPath }}' alt='Recipe Image'>
+          <img class='img-responsive' [src]='recipe.imgPath' [alt]='recipe.name'>
         </span>
       </div>
     </a>
