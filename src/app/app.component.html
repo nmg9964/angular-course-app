@@ -1,5 +1,11 @@
-<app-header></app-header>
-<app-recipe-book></app-recipe-book>
-<hr>
-<app-shopping-list></app-shopping-list>
+<app-header 
+  (displayRecipes)="recipesClicked()"
+  (displayShoppingList)="shoppingListClicked()">
+</app-header>
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-12' *ngIf="loadedFeature === 'recipe'"><app-recipe-book></app-recipe-book></div>
+    <div class='col-md-12' *ngIf="loadedFeature === 'shopping list'"><app-shopping-list></app-shopping-list></div>
+  </div>
+</div>
 

@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-course-app';
+  title: string = 'angular-course-app';
+  loadedFeature: string = ''
+
+  constructor() {}
+
+  recipesClicked() {
+    this.loadedFeature = 'recipe'
+  }
+
+  shoppingListClicked() {
+    this.loadedFeature = 'shopping list'
+  }
+
 }
