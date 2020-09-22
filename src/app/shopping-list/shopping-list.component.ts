@@ -17,8 +17,4 @@ export class ShoppingListComponent {
     this.ingredients = this.slService.getIngredients()
   }
 
-  pushIngredient(ingredient: Ingredient) {
-    this.ingredients.push(ingredient)
-  }
-
 }

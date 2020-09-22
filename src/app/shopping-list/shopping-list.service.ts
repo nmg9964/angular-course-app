@@ -7,7 +7,11 @@ export class ShoppingListService {
   ]
 
   getIngredients = () => {
-    return this.ingredients.slice()
+    return this.ingredients
+  }
+
+  addIngredient(ingredient: Ingredient) {
+    this.ingredients.push(ingredient)
   }
 
 }
