@@ -11,6 +11,12 @@ import { RecipeService } from './recipe.service'
 export class RecipeBookComponent {
   featuredRecipe: Recipe
 
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
+
+  ngOnInit() {
+    this.recipeService.selectedRecipe.subscribe((recipe: Recipe) => {
+      this.featuredRecipe = recipe
+    })
+  }
 
 }
